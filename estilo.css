@@ -6,7 +6,7 @@ body{margin:0;color:var(--text);font:16px/1.6 system-ui,-apple-system,'Segoe UI'
 main{max-width:720px;margin:0 auto;padding:20px 18px 48px}
 a{color:var(--accent)}
 .marca{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:1.15rem;letter-spacing:-.01em;color:var(--text);text-decoration:none;padding:6px 0}
-.marca i{width:16px;height:16px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(224,18,15,.2)}
+.marca img{width:56px;height:56px;border-radius:16px;background:#0c0c0c;flex:none}
 h1{font-size:2.1rem;line-height:1.1;margin:22px 0 8px;font-weight:800;letter-spacing:-.02em}
 h2{font-size:1.25rem;margin:30px 0 6px;font-weight:700}
 .sub{color:var(--muted);font-size:1.05rem;margin:0 0 24px}
@@ -14,11 +14,11 @@ h2{font-size:1.25rem;margin:30px 0 6px;font-weight:700}
 .juegos{display:grid;gap:14px}
 .carta{display:flex;align-items:center;gap:16px;padding:18px;background:var(--surface);border:1px solid var(--line);border-radius:22px;color:var(--text);text-decoration:none;transition:transform .15s,border-color .15s}
 .carta:hover,.carta:focus-visible{transform:translateY(-2px);border-color:var(--accent);outline:0}
-.carta img{width:88px;height:88px;border-radius:20px;flex:none}
+.carta img{width:96px;height:96px;border-radius:22px;background:#0c0c0c;flex:none}
 .carta b{display:block;font-size:1.45rem;line-height:1.15;font-weight:800;letter-spacing:-.01em}
 .carta span{display:block;color:var(--muted);font-size:.95rem;margin:4px 0 8px}
 .carta u{color:var(--accent);font-weight:700;text-decoration:none}
-@media (max-width:420px){.carta{flex-direction:column;align-items:flex-start}.carta img{width:72px;height:72px}}
+@media (max-width:420px){.carta{flex-direction:column;align-items:flex-start}.carta img{width:80px;height:80px}}
 @media (prefers-reduced-motion:reduce){.carta{transition:none}}
 ul,ol{padding-left:1.3em}li{margin:.3em 0}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:4px 18px 14px;margin:14px 0}
