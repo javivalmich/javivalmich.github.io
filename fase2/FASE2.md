@@ -110,6 +110,5 @@ Cuando `supabase-js` vaya dentro del repo de cada juego (Punto Ciego y Punto Fal
 «Dónde se alojan tus datos y transferencias internacionales». Después, subir la fecha de «Última actualización».
 
 ## Antes de publicar la política nueva
-- Rellenar `RESPONSABLE_NOMBRE` (dos veces en `privacidad/index.html`).
 - Aplicar en Supabase `supabase/migrations/20261006130000_purgar_borrados_log.sql` (aplica los 12 meses de conservación de `borrados_log`
   que promete la política).

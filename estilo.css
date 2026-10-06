@@ -24,4 +24,3 @@ ul,ol{padding-left:1.3em}li{margin:.3em 0}
 .box{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:4px 18px 14px;margin:14px 0}
 details{border-top:1px solid var(--line);padding:10px 0}details:first-of-type{border-top:0}summary{font-weight:700;cursor:pointer}
 nav.f{margin-top:36px;padding-top:14px;border-top:1px solid var(--line);font-size:.92rem;color:var(--muted)}
-mark{background:#ffe066;color:#111;padding:1px 5px;border-radius:5px;font-weight:700}
