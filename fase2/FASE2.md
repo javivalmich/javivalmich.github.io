@@ -103,3 +103,13 @@ verificar.) Prueba: registrarse con correo, Google, Apple y «olvidé mi contras
 ## Nota sobre la mayúscula de `Punto-Ciego`
 Las rutas antiguas `/Punto-Ciego/…` solo se redirigen por el `404.html` del hub. Es robusto (es HTTP 404 con JavaScript:
 vale para navegadores, no para rastreadores ni para un `curl`). Si alguna ficha de tienda antigua usaba esas URLs, cámbialas.
+
+## Pendiente del bloque 2: jsDelivr
+Cuando `supabase-js` vaya dentro del repo de cada juego (Punto Ciego y Punto Falso lo cargan hoy desde jsDelivr), **quitar jsDelivr de la política**
+(`privacidad/index.html`): la línea de «Con quién se comparte» marcada con el comentario `BLOQUE 2` y la mención a jsDelivr en
+«Dónde se alojan tus datos y transferencias internacionales». Después, subir la fecha de «Última actualización».
+
+## Antes de publicar la política nueva
+- Rellenar `RESPONSABLE_NOMBRE` (dos veces en `privacidad/index.html`).
+- Aplicar en Supabase `supabase/migrations/20261006130000_purgar_borrados_log.sql` (aplica los 12 meses de conservación de `borrados_log`
+  que promete la política).

@@ -15,7 +15,7 @@
 <a class="marca" href="/"><i></i>Punto Studio</a>
 <h1>Política de privacidad</h1>
 <p class="muted">Última actualización: 6 de octubre de 2026</p>
-<p>Esta política es común a <b>Punto Falso</b> y <b>Punto Ciego</b>, los juegos de Punto Studio. Guardamos lo mínimo, y esta página explica, sin letra pequeña, qué es y qué no. Cada juego mantiene también su propia página: <a href="/punto-falso/privacidad.html">Punto Falso</a> · <a href="/punto-ciego/privacidad.html">Punto Ciego</a>.</p>
+<p>Esta política es común a <b>Punto Falso</b> y <b>Punto Ciego</b>, los juegos de Punto Studio. Guardamos lo mínimo, y esta página explica, sin letra pequeña, qué es y qué no. Es la única política: las páginas de privacidad de cada juego redirigen aquí.</p>
 
 <h2>Lo esencial</h2>
 <ul>
@@ -25,9 +25,12 @@
 <li>Puedes borrar tu cuenta y todo lo asociado desde la propia app.</li>
 </ul>
 
+<h2>Quién es el responsable</h2>
+<p>El responsable del tratamiento de tus datos es <mark>RESPONSABLE_NOMBRE</mark>, que ofrece los juegos con el nombre comercial <b>Punto Studio</b>. Contacto: <a href="mailto:soporte@puntostudio.es">soporte@puntostudio.es</a>.</p>
+
 <h2>Qué datos se guardan</h2>
 <p><b>En tu móvil (solo en él):</b> tu nombre, el aspecto de tu personaje, tus ajustes y un identificador aleatorio para que, si recargas la página, vuelvas a tu sitio en la partida.</p>
-<p><b>En nuestro proveedor de cuentas, Supabase</b> (solo si tienes cuenta, con correo y contraseña, con Google o con Apple):</p>
+<p><b>En nuestro proveedor de cuentas, Supabase</b>, en un servidor de <b>Irlanda (UE)</b> (solo si tienes cuenta, con correo y contraseña, con Google o con Apple):</p>
 <ul>
 <li>Tu correo electrónico (si entras con Google o Apple, el que te facilitan ellos) y, si te registras con correo, tu contraseña protegida: nunca la vemos en claro.</li>
 <li>Tu nombre de jugador y el aspecto de tu personaje.</li>
@@ -36,6 +39,32 @@
 </ul>
 <p>Tu nombre de jugador, tu personaje y esos contadores pueden verlos otras personas con cuenta; tu correo no lo ve nadie más.</p>
 <p><b>Durante una partida en línea</b>, tu nombre, tu personaje y tus acciones viajan en directo entre los móviles de la partida y no se almacenan: al acabar, desaparecen. En <b>Punto Falso</b> lo hacen a través de un servicio de mensajería en tiempo real (Supabase Realtime) e incluyen tus votos y mensajes de texto; quién es el impostor se calcula en cada móvil y no viaja por la red, y el modo «un solo móvil» no usa red durante la partida. En <b>Punto Ciego</b> viajan también tu posición en el tablero (la sala de la casa donde estás, no tu ubicación GPS) y los mensajes del walkie, por servidores públicos de mensajería (MQTT), cifrados con una clave que sale del código de la partida.</p>
+
+<h2>Base legal: por qué podemos tratar tus datos</h2>
+<ul>
+<li><b>Ejecución del servicio</b> (art. 6.1.b del RGPD): tu correo, nombre de jugador, personaje y contadores se tratan para crear y mantener tu cuenta y para que puedas jugar partidas. Sin ellos no podemos darte la cuenta.</li>
+<li><b>Consentimiento</b> (art. 6.1.a del RGPD): para usar el micrófono, los sensores de movimiento y entrar con Google o con Apple. Lo das al aceptar el permiso del sistema o al pulsar ese botón, y puedes retirarlo cuando quieras (ajustes del móvil o del navegador, dejar de usar esa función o borrar la cuenta) sin que afecte a lo que ya se hizo.</li>
+</ul>
+<p>Para jugar sin cuenta no tratamos datos personales en nuestros servidores.</p>
+
+<h2>Cuánto tiempo guardamos tus datos</h2>
+<ul>
+<li><b>Tu cuenta, tu perfil y tus contadores</b>: mientras exista tu cuenta. <b>Al borrarla se eliminan de inmediato</b>, también el token de Apple si lo había.</li>
+<li><b>Lo que se guarda en tu móvil</b>: hasta que lo borres o borres los datos del navegador o de la app.</li>
+<li><b>Las partidas en línea</b> no se almacenan: desaparecen al acabar.</li>
+<li><b>Registro de borrados</b>: cada vez que se borra una cuenta anotamos una línea técnica con la fecha, el método de acceso de la cuenta (correo, Google o Apple), si se pudo revocar el token de Apple y una nota técnica. No lleva tu identificador, ni tu correo, ni tu nombre. Lo conservamos <b>12 meses</b>, para comprobar que los borrados y la revocación de Apple funcionan, y después se elimina automáticamente.</li>
+</ul>
+
+<h2>Dónde se alojan tus datos y transferencias internacionales</h2>
+<p>La base de datos de cuentas está alojada en un servidor de Supabase en <b>Irlanda (UE)</b>, así que tu correo, tu nombre de jugador y tu personaje se alojan en la UE.</p>
+<p>Aun así, algunos servicios que intervienen pueden tratar datos fuera de la Unión Europea, por ejemplo en EE. UU.:</p>
+<ul>
+<li><b>Supabase</b> es una empresa de EE. UU. y puede usar subencargados fuera de la UE.</li>
+<li><b>GitHub</b> (aloja las webs) y <b>jsDelivr</b> (descarga de la librería de cuentas, en ambos juegos): pueden ver tu dirección IP al descargar sus archivos.</li>
+<li><b>Google</b> y <b>Apple</b>, solo si eliges entrar con ellos.</li>
+<li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX, shiftr.io y Eclipse), solo en Punto Ciego.</li>
+</ul>
+<p>Estas transferencias se apoyan en las garantías que exige el RGPD: el <b>Marco de Privacidad UE-EE. UU.</b> cuando el proveedor está adherido a él o, en su defecto, las <b>cláusulas contractuales tipo</b> de la Comisión Europea. En el caso de los servidores públicos MQTT no tenemos contrato con ellos, y por eso solo reciben contenido cifrado con la clave de la partida y nunca datos de tu cuenta.</p>
 
 <h2>Chat entre amigos, bloquear y reportar</h2>
 <p>El chat de voz y de texto es entre amigos y no está moderado: nadie lo revisa ni lo guarda. Si alguien te molesta puedes <b>bloquearlo</b> (el bloqueo se guarda solo en tu móvil y puedes deshacerlo) o <b>reportarlo</b>: se abre un correo a soporte con el nombre del jugador, el código y la fecha. Ese correo lo envías tú y solo lo usamos para atender el reporte.</p>
@@ -51,7 +80,9 @@
 <li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX, shiftr.io y Eclipse), solo en Punto Ciego: por ellos viajan, cifrados, los mensajes de la partida y el audio del walkie. No ven tu cuenta ni tu correo.</li>
 <li><b>Google y Apple</b>, solo si eliges «Entrar con Google» o «Entrar con Apple»: te identifican y nos pasan tu correo.</li>
 <li><b>GitHub Pages</b>: aloja las webs y, como cualquier servidor web, puede registrar tu dirección IP al descargarlas.</li>
-<li><b>Google Fonts</b> (ambos juegos) y <b>jsDelivr</b> (descarga de la librería de cuentas, en Punto Ciego): también pueden ver tu dirección IP al descargar sus archivos. Esta página de inicio no carga nada externo.</li>
+<!-- BLOQUE 2: cuando supabase-js vaya dentro del repo de cada juego, quitar esta línea de jsDelivr y la mención a jsDelivr en «Dónde se alojan tus datos y transferencias internacionales» -->
+<li><b>jsDelivr</b> (descarga de la librería de cuentas, en ambos juegos): puede ver tu dirección IP al descargar ese archivo.</li>
+<li>Las <b>tipografías</b> las servimos nosotros desde el propio sitio: no se carga nada de Google Fonts. Esta página de inicio tampoco carga nada externo.</li>
 </ul>
 <p>No usamos cookies de publicidad ni de seguimiento, ni herramientas de analítica.</p>
 
@@ -61,13 +92,23 @@
 <li>En Punto Falso, toca <b>Mi cuenta</b> en la portada; en Punto Ciego, abre tu perfil (tu personaje, en el menú).</li>
 <li>Toca <b>Eliminar cuenta</b> y confirma (con tu contraseña, o escribiendo BORRAR si entraste con Google o Apple).</li>
 </ol>
-<p>Se borran de inmediato tu correo, tu nombre, tu personaje y tus contadores. Si entraste con Apple, también revocamos en Apple el acceso de la app a tu cuenta. No se puede deshacer. Es una cuenta compartida: al borrarla en un juego también se borra en el otro, con tu personaje, tu nombre y tus estadísticas de los dos. Si no puedes entrar en la app, escríbenos a <a href="mailto:javivalmich@gmail.com">javivalmich@gmail.com</a> desde la dirección con la que te registraste y la borramos nosotros.</p>
+<p>Se borran de inmediato tu correo, tu nombre, tu personaje y tus contadores. Si entraste con Apple, también revocamos en Apple el acceso de la app a tu cuenta. No se puede deshacer. Es una cuenta compartida: al borrarla en un juego también se borra en el otro, con tu personaje, tu nombre y tus estadísticas de los dos. Si no puedes entrar en la app, escríbenos a <a href="mailto:soporte@puntostudio.es">soporte@puntostudio.es</a> desde la dirección con la que te registraste y la borramos nosotros.</p>
 
 <h2>Menores</h2>
 <p>Los juegos son para mayores de 14 años. No pedimos edad ni datos personales para jugar. Si eres madre, padre o tutor y crees que un menor ha creado una cuenta, escríbenos y la eliminamos.</p>
 
 <h2>Tus derechos</h2>
-<p>Puedes pedirnos acceso, corrección o borrado de tus datos (el borrado también puedes hacerlo tú mismo, como se explica arriba). También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" rel="noopener">aepd.es</a>).</p>
+<p>Tienes derecho a:</p>
+<ul>
+<li><b>Acceso</b>: saber qué datos tuyos tenemos y recibir una copia.</li>
+<li><b>Rectificación</b>: corregir datos inexactos (el nombre y el personaje los puedes cambiar tú en la app).</li>
+<li><b>Supresión</b>: que borremos tus datos (también puedes hacerlo tú mismo, como se explica arriba).</li>
+<li><b>Oposición</b> al tratamiento de tus datos.</li>
+<li><b>Limitación</b> del tratamiento, por ejemplo mientras se resuelve una reclamación.</li>
+<li><b>Portabilidad</b>: recibir tus datos en un formato estructurado y de uso común.</li>
+<li><b>Retirar tu consentimiento</b> en cualquier momento, sin que afecte a lo ya hecho.</li>
+</ul>
+<p>Para ejercerlos, escríbenos a <a href="mailto:soporte@puntostudio.es">soporte@puntostudio.es</a> desde la dirección con la que te registraste, diciendo qué derecho quieres ejercer. Te responderemos como máximo en un mes y es gratis; podemos pedirte que confirmes tu identidad. Si crees que no tratamos bien tus datos, puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" rel="noopener">aepd.es</a>).</p>
 
 <h2>Términos y condiciones</h2>
 <p>Las normas de uso están en los términos de cada juego: <a href="/punto-falso/terminos.html">Punto Falso</a> · <a href="/punto-ciego/terminos.html">Punto Ciego</a>.</p>
@@ -76,8 +117,8 @@
 <p>Si cambia algo importante, lo actualizaremos aquí y cambiaremos la fecha de arriba.</p>
 
 <h2>Contacto</h2>
-<p>Responsable: Punto Studio, desarrollador de Punto Falso y Punto Ciego. Escríbenos a <a href="mailto:javivalmich@gmail.com">javivalmich@gmail.com</a>.</p>
-<nav class="f"><a href="/privacidad/">Privacidad</a> · <a href="/soporte/">Soporte</a> · <a href="mailto:javivalmich@gmail.com">javivalmich@gmail.com</a><br>Punto Studio. Juegos gratis, sin anuncios ni cobros.</nav>
+<p>Responsable: <mark>RESPONSABLE_NOMBRE</mark> (Punto Studio), desarrollador de Punto Falso y Punto Ciego. Escríbenos a <a href="mailto:soporte@puntostudio.es">soporte@puntostudio.es</a>.</p>
+<nav class="f"><a href="/privacidad/">Privacidad</a> · <a href="/soporte/">Soporte</a> · <a href="mailto:soporte@puntostudio.es">soporte@puntostudio.es</a><br>Punto Studio. Juegos gratis, sin anuncios ni cobros.</nav>
 </main>
 </body>
 </html>
