@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0d">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Ccircle cx=%2716%27 cy=%2716%27 r=%2712%27 fill=%27%23e0120f%27/%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png">
+<link rel="stylesheet" href="/estilo.css">
+<title>Privacidad · Punto Studio</title>
+<meta name="description" content="Política de privacidad común de Punto Falso y Punto Ciego, los juegos de Punto Studio.">
+</head>
+<body>
+<main>
+<a class="marca" href="/"><i></i>Punto Studio</a>
+<h1>Política de privacidad</h1>
+<p class="muted">Última actualización: 6 de octubre de 2026</p>
+<p>Esta política es común a <b>Punto Falso</b> y <b>Punto Ciego</b>, los juegos de Punto Studio. Guardamos lo mínimo, y esta página explica, sin letra pequeña, qué es y qué no. Cada juego mantiene también su propia página: <a href="/punto-falso/privacidad.html">Punto Falso</a> · <a href="/punto-ciego/privacidad.html">Punto Ciego</a>.</p>
+
+<h2>Lo esencial</h2>
+<ul>
+<li>Si creas una cuenta, guardamos tu correo, tu nombre de jugador y tu personaje, y unos contadores de partidas. Nada más.</li>
+<li>El audio del walkie-talkie no se graba ni se almacena. Se envía en directo al resto de la partida y desaparece.</li>
+<li>No hay publicidad, ni rastreadores, ni venta de datos.</li>
+<li>Puedes borrar tu cuenta y todo lo asociado desde la propia app.</li>
+</ul>
+
+<h2>Qué datos se guardan</h2>
+<p><b>En tu móvil (solo en él):</b> tu nombre, el aspecto de tu personaje, tus ajustes y un identificador aleatorio para que, si recargas la página, vuelvas a tu sitio en la partida.</p>
+<p><b>En nuestro proveedor de cuentas, Supabase</b> (solo si tienes cuenta, con correo y contraseña, con Google o con Apple):</p>
+<ul>
+<li>Tu correo electrónico (si entras con Google o Apple, el que te facilitan ellos) y, si te registras con correo, tu contraseña protegida: nunca la vemos en claro.</li>
+<li>Tu nombre de jugador y el aspecto de tu personaje.</li>
+<li>Unos contadores de partidas jugadas, ganadas y como impostor.</li>
+<li>Solo si entras con Apple: el token que Apple nos entrega al iniciar sesión, que guardamos únicamente para poder revocarlo en Apple cuando borres tu cuenta. Nadie más puede leerlo y se borra con la cuenta.</li>
+</ul>
+<p>Tu nombre de jugador, tu personaje y esos contadores pueden verlos otras personas con cuenta; tu correo no lo ve nadie más.</p>
+<p><b>Durante una partida en línea</b>, tu nombre, tu personaje y tus acciones viajan en directo entre los móviles de la partida y no se almacenan: al acabar, desaparecen. En <b>Punto Falso</b> lo hacen a través de un servicio de mensajería en tiempo real (Supabase Realtime) e incluyen tus votos y mensajes de texto; quién es el impostor se calcula en cada móvil y no viaja por la red, y el modo «un solo móvil» no usa red durante la partida. En <b>Punto Ciego</b> viajan también tu posición en el tablero (la sala de la casa donde estás, no tu ubicación GPS) y los mensajes del walkie, por servidores públicos de mensajería (MQTT), cifrados con una clave que sale del código de la partida.</p>
+
+<h2>Chat entre amigos, bloquear y reportar</h2>
+<p>El chat de voz y de texto es entre amigos y no está moderado: nadie lo revisa ni lo guarda. Si alguien te molesta puedes <b>bloquearlo</b> (el bloqueo se guarda solo en tu móvil y puedes deshacerlo) o <b>reportarlo</b>: se abre un correo a soporte con el nombre del jugador, el código y la fecha. Ese correo lo envías tú y solo lo usamos para atender el reporte.</p>
+
+<h2>Micrófono y otros permisos</h2>
+<p>El micrófono solo se pide cuando usas el walkie-talkie dentro de una partida, y solo está abierto mientras hablas. Tu voz se envía en directo a los demás jugadores; no se graba ni se guarda en ningún servidor. Puedes jugar sin usar el micrófono (hay mensajes de texto) y retirar el permiso cuando quieras desde los ajustes de tu móvil o navegador.</p>
+<p>En <b>Punto Ciego</b>, una tarea del juego («soplar al móvil») puede usar el micrófono un momento para medir el soplido: el sonido se analiza en tu móvil y no sale de él. Algunas tareas pueden usar el sensor de movimiento (en iPhone te lo pide el sistema), mantener la pantalla encendida y hacer vibrar el móvil; esa información se usa solo en tu móvil mientras juegas.</p>
+
+<h2>Con quién se comparte</h2>
+<p>No vendemos ni cedemos tus datos. Para que los juegos funcionen intervienen estos servicios:</p>
+<ul>
+<li><b>Supabase</b>: cuentas, perfiles y, en Punto Falso, la mensajería en tiempo real de las salas.</li>
+<li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX, shiftr.io y Eclipse), solo en Punto Ciego: por ellos viajan, cifrados, los mensajes de la partida y el audio del walkie. No ven tu cuenta ni tu correo.</li>
+<li><b>Google y Apple</b>, solo si eliges «Entrar con Google» o «Entrar con Apple»: te identifican y nos pasan tu correo.</li>
+<li><b>GitHub Pages</b>: aloja las webs y, como cualquier servidor web, puede registrar tu dirección IP al descargarlas.</li>
+<li><b>Google Fonts</b> (ambos juegos) y <b>jsDelivr</b> (descarga de la librería de cuentas, en Punto Ciego): también pueden ver tu dirección IP al descargar sus archivos. Esta página de inicio no carga nada externo.</li>
+</ul>
+<p>No usamos cookies de publicidad ni de seguimiento, ni herramientas de analítica.</p>
+
+<h2 id="borrar-cuenta">Cómo borrar tu cuenta</h2>
+<ol>
+<li>Entra con tu cuenta en <a href="/punto-falso/">Punto Falso</a> o <a href="/punto-ciego/">Punto Ciego</a>.</li>
+<li>En Punto Falso, toca <b>Mi cuenta</b> en la portada; en Punto Ciego, abre tu perfil (tu personaje, en el menú).</li>
+<li>Toca <b>Eliminar cuenta</b> y confirma (con tu contraseña, o escribiendo BORRAR si entraste con Google o Apple).</li>
+</ol>
+<p>Se borran de inmediato tu correo, tu nombre, tu personaje y tus contadores. Si entraste con Apple, también revocamos en Apple el acceso de la app a tu cuenta. No se puede deshacer. Es una cuenta compartida: al borrarla en un juego también se borra en el otro, con tu personaje, tu nombre y tus estadísticas de los dos. Si no puedes entrar en la app, escríbenos a <a href="mailto:javivalmich@gmail.com">javivalmich@gmail.com</a> desde la dirección con la que te registraste y la borramos nosotros.</p>
+
+<h2>Menores</h2>
+<p>Los juegos son para mayores de 14 años. No pedimos edad ni datos personales para jugar. Si eres madre, padre o tutor y crees que un menor ha creado una cuenta, escríbenos y la eliminamos.</p>
+
+<h2>Tus derechos</h2>
+<p>Puedes pedirnos acceso, corrección o borrado de tus datos (el borrado también puedes hacerlo tú mismo, como se explica arriba). También puedes reclamar ante la Agencia Española de Protección de Datos (<a href="https://www.aepd.es" rel="noopener">aepd.es</a>).</p>
+
+<h2>Términos y condiciones</h2>
+<p>Las normas de uso están en los términos de cada juego: <a href="/punto-falso/terminos.html">Punto Falso</a> · <a href="/punto-ciego/terminos.html">Punto Ciego</a>.</p>
+
+<h2>Cambios en esta política</h2>
+<p>Si cambia algo importante, lo actualizaremos aquí y cambiaremos la fecha de arriba.</p>
+
+<h2>Contacto</h2>
+<p>Responsable: Punto Studio, desarrollador de Punto Falso y Punto Ciego. Escríbenos a <a href="mailto:javivalmich@gmail.com">javivalmich@gmail.com</a>.</p>
+<nav class="f"><a href="/privacidad/">Privacidad</a> · <a href="/soporte/">Soporte</a> · <a href="mailto:javivalmich@gmail.com">javivalmich@gmail.com</a><br>Punto Studio. Juegos gratis, sin anuncios ni cobros.</nav>
+</main>
+</body>
+</html>

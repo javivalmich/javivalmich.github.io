@@ -1,0 +1,4 @@
+# Solo se publica la web; las notas y herramientas de la mudanza no se sirven
+exclude:
+  - fase2
+  - README.md
