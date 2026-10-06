@@ -84,7 +84,7 @@ cd ~/javivalmich.github.io && PW=C:/Users/javiv/el-impostor/node_modules/playwri
 ```
 Cubre: rutas nuevas (200 y contenido), `manifest.json` con CORS, http→https, www→raíz, y las direcciones antiguas con
 `?c=`, `#s=` y `#j=…` (incluidas las betas, privacidad y `#borrar-cuenta`). Si `/Punto-Ciego/…` o `/el-impostor/…` **no**
-redirigen (Pages no sirve el 404 del hub), plan B: crear un repo stub  (esto sí es posible) con un  y un  que redirijan igual que el hub; para Punto Ciego no cabe stub (mismo nombre sin mayúsculas), así que se afinaría el 404 del hub.
+redirigen (Pages no sirve el 404 del hub), plan B: crear un repo stub `el-impostor` (esto sí es posible) con un `index.html` y un `404.html` que redirijan igual que el hub; para Punto Ciego no cabe stub (mismo nombre sin mayúsculas), así que se afinaría el 404 del hub.
 Prueba manual imprescindible: abrir la app instalada en un móvil que la tuviera antes (con red) y comprobar que llega a
 `puntostudio.es/punto-…/` con su código de sala.
 
