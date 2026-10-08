@@ -1,0 +1,13 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["R7TF673FZ7.es.puntostudio.puntociego"],
+        "components": [
+          { "/": "/punto-ciego/beta/*", "exclude": true, "comment": "la beta es solo web" },
+          { "/": "/punto-ciego/*", "comment": "enlaces y QR de partida: ?c=CÓDIGO" }
+        ]
+      }
+    ]
+  }
+}

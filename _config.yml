@@ -2,3 +2,6 @@
 exclude:
   - fase2
   - README.md
+# Jekyll ignora las carpetas que empiezan por punto: hace falta para servir /.well-known/apple-app-site-association (Universal Links de la app iOS)
+include:
+  - .well-known
