@@ -15,7 +15,7 @@
 <main>
 <a class="marca" href="/"><img src="/img/punto-studio.webp" alt="" width="56" height="56">Punto Studio</a>
 <h1>Política de privacidad</h1>
-<p class="muted">Última actualización: 8 de octubre de 2026</p>
+<p class="muted">Última actualización: 9 de octubre de 2026</p>
 <p>Esta política es común a <b>Punto Falso</b> y <b>Punto Ciego</b>, los juegos de Punto Studio. Guardamos lo mínimo, y esta página explica, sin letra pequeña, qué es y qué no. Es la única política: las páginas de privacidad de cada juego redirigen aquí.</p>
 
 <h2>Lo esencial</h2>
@@ -39,7 +39,7 @@
 <li>Solo si entras con Apple: el token que Apple nos entrega al iniciar sesión, que guardamos únicamente para poder revocarlo en Apple cuando borres tu cuenta. Nadie más puede leerlo y se borra con la cuenta.</li>
 </ul>
 <p>Tu nombre de jugador, tu personaje y esos contadores pueden verlos otras personas con cuenta; tu correo no lo ve nadie más.</p>
-<p><b>Durante una partida en línea</b>, tu nombre, tu personaje y tus acciones viajan en directo entre los móviles de la partida. En <b>Punto Falso</b> lo hacen a través de un servicio de mensajería en tiempo real (Supabase Realtime) e incluyen tus votos y mensajes de texto; quién es el impostor se calcula en cada móvil y no viaja por la red, y el modo «un solo móvil» no usa red durante la partida; esos datos no se almacenan y desaparecen al acabar. En <b>Punto Ciego</b> viajan también tu posición en el tablero (la sala de la casa donde estás, no tu ubicación GPS) y los mensajes del walkie, por servidores públicos de mensajería (MQTT), cifrados con una clave que sale del código de la partida (más abajo explicamos cuánto tiempo se conservan).</p>
+<p><b>Durante una partida en línea</b>, tu nombre, tu personaje y tus acciones viajan en directo entre los móviles de la partida. En <b>Punto Falso</b> lo hacen a través de un servicio de mensajería en tiempo real (Supabase Realtime) e incluyen tus votos, tus mensajes de texto y la <b>voz del walkie-talkie</b>: ese servicio solo los reenvía al resto de la sala en el momento y <b>no los guarda</b> (ni la voz ni el texto; nadie los puede recuperar después). Quién es el impostor se calcula en cada móvil y no viaja por la red, y el modo «un solo móvil» no usa red durante la partida; esos datos no se almacenan y desaparecen al acabar. En <b>Punto Ciego</b> viajan también tu posición en el tablero (la sala de la casa donde estás, no tu ubicación GPS) y los mensajes del walkie, por servidores públicos de mensajería (MQTT), cifrados con una clave que sale del código de la partida (más abajo explicamos cuánto tiempo se conservan).</p>
 <p><b>Cómo se conserva una partida de Punto Ciego.</b> Para que quien entra en una sala reciba al momento cómo va la partida, el móvil anfitrión publica su estado como mensaje <i>retenido</i> en esos servidores, cifrado con la clave de la partida. Incluye nombres de jugador, personajes, el identificador de cada jugador (el de tu cuenta si la tienes; uno aleatorio si juegas sin cuenta), papeles, avances y los mensajes de texto. Los servidores lo guardan hasta que se sustituye o se borra, y nosotros lo borramos: unos 30 segundos después de terminar la partida y cuando el anfitrión sale de la sala. Si el anfitrión pierde la conexión o cierra la app de golpe, el estado puede quedarse allí hasta que el propio servidor lo elimine, porque son servicios públicos que no controlamos. La voz del walkie no se retiene. El cifrado depende de un código de 5 caracteres: sirve para que las partidas no se mezclen y para que no lo lea quien no conoce el código, pero no es el nivel de protección de una cuenta, así que no pongas en el chat de una partida nada que no dirías en voz alta.</p>
 <p><b>Dirección IP.</b> Para funcionar, tu móvil se conecta directamente con Supabase (cuentas) y con los servidores públicos de mensajería MQTT (Punto Ciego), que por tanto ven tu dirección IP y la hora de conexión, como cualquier servidor al que te conectas. En la app de Punto Ciego, al abrirla se consulta a Supabase qué formas de acceso están activas, de modo que también ve tu IP aunque juegues sin cuenta.</p>
 
@@ -76,6 +76,25 @@
 <p>El micrófono solo se pide cuando usas el walkie-talkie dentro de una partida, y solo está abierto mientras hablas. Tu voz se envía en directo a los demás jugadores; no se graba ni se guarda en ningún servidor. Puedes jugar sin usar el micrófono (hay mensajes de texto) y retirar el permiso cuando quieras desde los ajustes de tu móvil o navegador.</p>
 <p>En <b>Punto Ciego</b>, una tarea del juego («soplar al móvil») puede usar el micrófono un momento para medir el soplido: el sonido se analiza en tu móvil y no sale de él. Algunas tareas pueden usar el sensor de movimiento (en iPhone te lo pide el sistema), mantener la pantalla encendida y hacer vibrar el móvil; esa información se usa solo en tu móvil mientras juegas.</p>
 
+<h2>En la app de iPhone y en la web</h2>
+<p>Los juegos funcionan como app para iPhone y como web (en el navegador o añadidos a la pantalla de inicio). Lo que sabe cada uno:</p>
+<p><b>En la app de iPhone</b> (Punto Falso y Punto Ciego):</p>
+<ul>
+<li>La pantalla del juego, las tipografías y la librería de cuentas van dentro de la app: al abrirla no se descarga nada de GitHub ni de terceros. Sí se conecta con Supabase para consultar qué formas de acceso están activas, así que Supabase ve tu dirección IP aunque juegues sin cuenta, y con él se conectan las cuentas y, en Punto Falso, las salas en línea y el walkie.</li>
+<li>Para entrar con una cuenta de otro servicio, la app ofrece solo <b>Entrar con Apple</b>, que usa el sistema de Apple de tu iPhone. No ofrece Google.</li>
+<li>Tu nombre, tu personaje, tus ajustes (tema, sonido y vibración) y un identificador aleatorio se guardan solo en el almacenamiento de la app, en tu iPhone, y desaparecen si la desinstalas. La vibración usa el motor háptico del iPhone y no necesita ningún permiso ni envía datos.</li>
+<li>El micrófono solo se pide la primera vez que usas el walkie-talkie y lo gestiona iOS, que te deja retirarlo en Ajustes › Punto Falso (o Punto Ciego).</li>
+<li>Los enlaces a esta política, a los términos, al soporte y a la recuperación de contraseña se abren en el navegador integrado de iOS: esas páginas se sirven desde GitHub Pages, que puede registrar tu IP, y se rigen por lo que explica «En la web».</li>
+</ul>
+<p><b>En la web</b> (navegador o pantalla de inicio):</p>
+<ul>
+<li>El juego se descarga de <b>GitHub Pages</b> (puntostudio.es), que, como cualquier servidor web, puede ver tu dirección IP. El navegador guarda una copia del juego en su caché (service worker) para que abra sin conexión.</li>
+<li>Puedes entrar con correo, con <b>Google</b> o con <b>Apple</b>: en los dos últimos te redirigimos a su página de inicio de sesión y nos devuelven tu correo.</li>
+<li>Tu nombre, tu personaje, tus ajustes y el identificador aleatorio se guardan en el almacenamiento local de tu navegador y se borran al borrar los datos del sitio.</li>
+<li>El micrófono, y la vibración en los navegadores que la permiten, los gestiona el navegador.</li>
+</ul>
+<p>En ninguno de los dos hay publicidad, analítica ni cookies de seguimiento.</p>
+
 <h2>Con quién se comparte</h2>
 <p>No vendemos ni cedemos tus datos. Para que los juegos funcionen intervienen estos servicios:</p>
 <ul>
@@ -83,6 +102,7 @@
 <li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX y shiftr.io), solo en Punto Ciego: por ellos viajan, cifrados, los mensajes de la partida y el audio del walkie, y retienen temporalmente el estado cifrado de la partida. Ven tu dirección IP, pero no tu cuenta ni tu correo.</li>
 <li><b>Google y Apple</b>, solo si eliges «Entrar con Google» o «Entrar con Apple»: te identifican y nos pasan tu correo.</li>
 <li><b>GitHub Pages</b>: aloja las webs y, como cualquier servidor web, puede registrar tu dirección IP al descargarlas.</li>
+<li><b>Arsys</b>: proveedor del correo electrónico de soporte (soporte@puntostudio.es). Si nos escribes (por ejemplo, para reportar a un jugador o pedir que borremos tu cuenta), tu mensaje y tu dirección de correo pasan por sus servidores.</li>
 <li>Las <b>tipografías</b> y la <b>librería de cuentas</b> las servimos nosotros desde el propio sitio: no se carga nada de Google Fonts ni de redes de distribución de terceros. Esta página de inicio tampoco carga nada externo.</li>
 </ul>
 <p>No usamos cookies de publicidad ni de seguimiento, ni herramientas de analítica.</p>
