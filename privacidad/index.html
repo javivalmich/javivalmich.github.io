@@ -15,7 +15,7 @@
 <main>
 <a class="marca" href="/"><img src="/img/punto-studio.webp" alt="" width="56" height="56">Punto Studio</a>
 <h1>Política de privacidad</h1>
-<p class="muted">Última actualización: 6 de octubre de 2026</p>
+<p class="muted">Última actualización: 8 de octubre de 2026</p>
 <p>Esta política es común a <b>Punto Falso</b> y <b>Punto Ciego</b>, los juegos de Punto Studio. Guardamos lo mínimo, y esta página explica, sin letra pequeña, qué es y qué no. Es la única política: las páginas de privacidad de cada juego redirigen aquí.</p>
 
 <h2>Lo esencial</h2>
@@ -39,20 +39,22 @@
 <li>Solo si entras con Apple: el token que Apple nos entrega al iniciar sesión, que guardamos únicamente para poder revocarlo en Apple cuando borres tu cuenta. Nadie más puede leerlo y se borra con la cuenta.</li>
 </ul>
 <p>Tu nombre de jugador, tu personaje y esos contadores pueden verlos otras personas con cuenta; tu correo no lo ve nadie más.</p>
-<p><b>Durante una partida en línea</b>, tu nombre, tu personaje y tus acciones viajan en directo entre los móviles de la partida y no se almacenan: al acabar, desaparecen. En <b>Punto Falso</b> lo hacen a través de un servicio de mensajería en tiempo real (Supabase Realtime) e incluyen tus votos y mensajes de texto; quién es el impostor se calcula en cada móvil y no viaja por la red, y el modo «un solo móvil» no usa red durante la partida. En <b>Punto Ciego</b> viajan también tu posición en el tablero (la sala de la casa donde estás, no tu ubicación GPS) y los mensajes del walkie, por servidores públicos de mensajería (MQTT), cifrados con una clave que sale del código de la partida.</p>
+<p><b>Durante una partida en línea</b>, tu nombre, tu personaje y tus acciones viajan en directo entre los móviles de la partida. En <b>Punto Falso</b> lo hacen a través de un servicio de mensajería en tiempo real (Supabase Realtime) e incluyen tus votos y mensajes de texto; quién es el impostor se calcula en cada móvil y no viaja por la red, y el modo «un solo móvil» no usa red durante la partida; esos datos no se almacenan y desaparecen al acabar. En <b>Punto Ciego</b> viajan también tu posición en el tablero (la sala de la casa donde estás, no tu ubicación GPS) y los mensajes del walkie, por servidores públicos de mensajería (MQTT), cifrados con una clave que sale del código de la partida (más abajo explicamos cuánto tiempo se conservan).</p>
+<p><b>Cómo se conserva una partida de Punto Ciego.</b> Para que quien entra en una sala reciba al momento cómo va la partida, el móvil anfitrión publica su estado como mensaje <i>retenido</i> en esos servidores, cifrado con la clave de la partida. Incluye nombres de jugador, personajes, el identificador de cada jugador (el de tu cuenta si la tienes; uno aleatorio si juegas sin cuenta), papeles, avances y los mensajes de texto. Los servidores lo guardan hasta que se sustituye o se borra, y nosotros lo borramos: unos 30 segundos después de terminar la partida y cuando el anfitrión sale de la sala. Si el anfitrión pierde la conexión o cierra la app de golpe, el estado puede quedarse allí hasta que el propio servidor lo elimine, porque son servicios públicos que no controlamos. La voz del walkie no se retiene. El cifrado depende de un código de 5 caracteres: sirve para que las partidas no se mezclen y para que no lo lea quien no conoce el código, pero no es el nivel de protección de una cuenta, así que no pongas en el chat de una partida nada que no dirías en voz alta.</p>
+<p><b>Dirección IP.</b> Para funcionar, tu móvil se conecta directamente con Supabase (cuentas) y con los servidores públicos de mensajería MQTT (Punto Ciego), que por tanto ven tu dirección IP y la hora de conexión, como cualquier servidor al que te conectas. En la app de Punto Ciego, al abrirla se consulta a Supabase qué formas de acceso están activas, de modo que también ve tu IP aunque juegues sin cuenta.</p>
 
 <h2>Base legal: por qué podemos tratar tus datos</h2>
 <ul>
 <li><b>Ejecución del servicio</b> (art. 6.1.b del RGPD): tu correo, nombre de jugador, personaje y contadores se tratan para crear y mantener tu cuenta y para que puedas jugar partidas. Sin ellos no podemos darte la cuenta.</li>
 <li><b>Consentimiento</b> (art. 6.1.a del RGPD): para usar el micrófono, los sensores de movimiento y entrar con Google o con Apple. Lo das al aceptar el permiso del sistema o al pulsar ese botón, y puedes retirarlo cuando quieras (ajustes del móvil o del navegador, dejar de usar esa función o borrar la cuenta) sin que afecte a lo que ya se hizo.</li>
 </ul>
-<p>Para jugar sin cuenta no tratamos datos personales en nuestros servidores.</p>
+<p><b>Jugar sin cuenta (invitado).</b> Punto Ciego permite jugar sin crear cuenta: no se guarda nada tuyo en Supabase (ni correo, ni contadores, ni estadísticas). Tu nombre, tu personaje y un identificador aleatorio se guardan solo en tu móvil. Cuando juegas una partida en línea esos datos viajan a los demás jugadores y pasan por los servidores MQTT como se explica arriba, y Supabase ve tu dirección IP al abrir la app. Aparte de eso, para jugar sin cuenta no guardamos datos personales tuyos en nuestra base de datos.</p>
 
 <h2>Cuánto tiempo guardamos tus datos</h2>
 <ul>
 <li><b>Tu cuenta, tu perfil y tus contadores</b>: mientras exista tu cuenta. <b>Al borrarla se eliminan de inmediato</b>, también el token de Apple si lo había.</li>
 <li><b>Lo que se guarda en tu móvil</b>: hasta que lo borres o borres los datos del navegador o de la app.</li>
-<li><b>Las partidas en línea</b> no se almacenan: desaparecen al acabar.</li>
+<li><b>Las partidas en línea</b>: en Punto Falso no se almacenan y desaparecen al acabar. En Punto Ciego el estado de la partida se retiene, cifrado, en los servidores MQTT mientras dura y se borra unos 30 segundos después de terminar o cuando sale el anfitrión (si el anfitrión se desconecta de golpe, puede tardar más: ver arriba).</li>
 <li><b>Registro de borrados</b>: cada vez que se borra una cuenta anotamos una línea técnica con la fecha, el método de acceso de la cuenta (correo, Google o Apple), si se pudo revocar el token de Apple y una nota técnica. No lleva tu identificador, ni tu correo, ni tu nombre. Lo conservamos <b>12 meses</b>, para comprobar que los borrados y la revocación de Apple funcionan, y después se elimina automáticamente.</li>
 </ul>
 
@@ -63,9 +65,9 @@
 <li><b>Supabase</b> es una empresa de EE. UU. y puede usar subencargados fuera de la UE.</li>
 <li><b>GitHub</b> (aloja las webs): puede ver tu dirección IP al descargar sus archivos.</li>
 <li><b>Google</b> y <b>Apple</b>, solo si eliges entrar con ellos.</li>
-<li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX, shiftr.io y Eclipse), solo en Punto Ciego.</li>
+<li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX y shiftr.io), solo en Punto Ciego.</li>
 </ul>
-<p>Estas transferencias se apoyan en las garantías que exige el RGPD: el <b>Marco de Privacidad UE-EE. UU.</b> cuando el proveedor está adherido a él o, en su defecto, las <b>cláusulas contractuales tipo</b> de la Comisión Europea. En el caso de los servidores públicos MQTT no tenemos contrato con ellos, y por eso solo reciben contenido cifrado con la clave de la partida y nunca datos de tu cuenta.</p>
+<p>Estas transferencias se apoyan en las garantías que exige el RGPD: el <b>Marco de Privacidad UE-EE. UU.</b> cuando el proveedor está adherido a él o, en su defecto, las <b>cláusulas contractuales tipo</b> de la Comisión Europea. En el caso de los servidores públicos MQTT no tenemos contrato con ellos, y por eso solo reciben contenido cifrado con la clave de la partida y nunca datos de tu cuenta (sí ven tu dirección IP).</p>
 
 <h2>Chat entre amigos, bloquear y reportar</h2>
 <p>El chat de voz y de texto es entre amigos y no está moderado: nadie lo revisa ni lo guarda. Si alguien te molesta puedes <b>bloquearlo</b> (el bloqueo se guarda solo en tu móvil y puedes deshacerlo) o <b>reportarlo</b>: se abre un correo a soporte con el nombre del jugador, el código y la fecha. Ese correo lo envías tú y solo lo usamos para atender el reporte.</p>
@@ -77,8 +79,8 @@
 <h2>Con quién se comparte</h2>
 <p>No vendemos ni cedemos tus datos. Para que los juegos funcionen intervienen estos servicios:</p>
 <ul>
-<li><b>Supabase</b>: cuentas, perfiles y, en Punto Falso, la mensajería en tiempo real de las salas.</li>
-<li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX, shiftr.io y Eclipse), solo en Punto Ciego: por ellos viajan, cifrados, los mensajes de la partida y el audio del walkie. No ven tu cuenta ni tu correo.</li>
+<li><b>Supabase</b>: cuentas, perfiles y, en Punto Falso, la mensajería en tiempo real de las salas. Ve tu dirección IP al conectarte.</li>
+<li><b>Servidores públicos de mensajería MQTT</b> (HiveMQ, EMQX y shiftr.io), solo en Punto Ciego: por ellos viajan, cifrados, los mensajes de la partida y el audio del walkie, y retienen temporalmente el estado cifrado de la partida. Ven tu dirección IP, pero no tu cuenta ni tu correo.</li>
 <li><b>Google y Apple</b>, solo si eliges «Entrar con Google» o «Entrar con Apple»: te identifican y nos pasan tu correo.</li>
 <li><b>GitHub Pages</b>: aloja las webs y, como cualquier servidor web, puede registrar tu dirección IP al descargarlas.</li>
 <li>Las <b>tipografías</b> y la <b>librería de cuentas</b> las servimos nosotros desde el propio sitio: no se carga nada de Google Fonts ni de redes de distribución de terceros. Esta página de inicio tampoco carga nada externo.</li>
