@@ -2,11 +2,58 @@
   "applinks": {
     "details": [
       {
-        "appIDs": ["R7TF673FZ7.es.puntostudio.puntociego"],
+        "appIDs": [
+          "R7TF673FZ7.es.puntostudio.puntociego"
+        ],
         "components": [
-          { "/": "/punto-ciego/beta/*", "exclude": true, "comment": "la beta es solo web" },
-          { "/": "/punto-ciego/", "?": { "c": "?????" }, "comment": "solo la pagina de partida: ?c=CODIGO (5 caracteres)" },
-          { "/": "/punto-ciego/index.html", "?": { "c": "?????" } }
+          {
+            "/": "/punto-ciego/beta/*",
+            "exclude": true,
+            "comment": "la beta es solo web"
+          },
+          {
+            "/": "/punto-ciego/",
+            "?": {
+              "c": "?????"
+            },
+            "comment": "solo la pagina de partida: ?c=CODIGO (5 caracteres)"
+          },
+          {
+            "/": "/punto-ciego/index.html",
+            "?": {
+              "c": "?????"
+            }
+          }
+        ]
+      },
+      {
+        "appIDs": [
+          "R7TF673FZ7.es.puntostudio.puntofalso"
+        ],
+        "components": [
+          {
+            "/": "/punto-falso/beta/*",
+            "exclude": true,
+            "comment": "la beta es solo web"
+          },
+          {
+            "/": "/punto-falso/",
+            "?": {
+              "s": "?????"
+            },
+            "comment": "enlace de sala: /punto-falso/?s=CODIGO (5 caracteres)"
+          },
+          {
+            "/": "/punto-falso/index.html",
+            "?": {
+              "s": "?????"
+            }
+          },
+          {
+            "/": "/punto-falso/",
+            "#": "s=?????",
+            "comment": "enlaces antiguos de sala: /punto-falso/#s=CODIGO"
+          }
         ]
       }
     ]

@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "es.puntostudio.puntofalso",
+      "sha256_cert_fingerprints": [
+        "72:3A:25:92:BC:09:A4:81:07:17:C0:80:C1:CC:EC:3E:33:31:29:1F:85:58:8F:1B:00:47:E8:81:27:3E:6A:4F",
+        "FD:9A:BD:6E:79:ED:5B:EB:1F:94:1E:40:DC:4A:53:C4:DB:72:71:5B:D6:C9:88:F2:F2:22:14:E7:3F:C8:31:78"
+      ]
+    }
+  }
+]
