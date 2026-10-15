@@ -11,5 +11,18 @@
         "FD:9A:BD:6E:79:ED:5B:EB:1F:94:1E:40:DC:4A:53:C4:DB:72:71:5B:D6:C9:88:F2:F2:22:14:E7:3F:C8:31:78"
       ]
     }
+  },
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "es.puntostudio.puntociego",
+      "sha256_cert_fingerprints": [
+        "AF:E2:89:5D:E0:C1:F3:41:B9:68:34:08:58:BA:41:A3:4E:25:44:7A:6D:47:37:FB:45:3C:80:B1:B6:12:E9:D7",
+        "FD:9A:BD:6E:79:ED:5B:EB:1F:94:1E:40:DC:4A:53:C4:DB:72:71:5B:D6:C9:88:F2:F2:22:14:E7:3F:C8:31:78"
+      ]
+    }
   }
 ]
